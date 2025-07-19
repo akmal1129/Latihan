@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Pia</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section {
+      display: none;
+      padding: 100px 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #ff1493;
+      font-size: 90px;
+      margin-bottom: 30px;
+    }
+
+    .hiasan {
+      font-size: 70px;
+      margin-top: 40px;
+      animation: goyang 2s infinite alternate;
+    }
+
+    @keyframes goyang {
+      from {
+        transform: rotate(-5deg);
+      }
+      to {
+        transform: rotate(5deg);
+      }
+    }
+
+    button {
+      padding: 25px 50px;
+      font-size: 30px;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 60px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .penutup {
+      font-size: 42px;
+      color: #db0073;
+      margin-top: 100px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Halaman Awal -->
+  <div id="awal" class="section active">
+    <button onclick="showSection('pesan')">Lihat Pesan</button>
+  </div>
+
+  <!-- Halaman Pesan -->
+  <div id="pesan" class="section">
+    <h1>halo piaaaa</h1>
+    <h2>iloveyou</h2>
+    <div class="hiasan">🌸💖🌼💘🌹</div>
+    <button onclick="showSection('akhir')">Lanjut</button>
+  </div>
+
+  <!-- Halaman Akhir -->
+  <div id="akhir" class="section">
+    <p class="penutup">
+      makasih yaa udah semangatin aku,<br>
+      aku ini masih belajar 🤭
+    </p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach((section) => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
